@@ -1,0 +1,60 @@
+.header {
+  background: var(--clr-light-green);
+  padding: 1.5rem 2rem;
+
+  &-djamo-logo {
+    width: 100%;
+    max-width: 130px;
+  }
+
+  &-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.close-menu-icon {
+  width: 25px;
+}
+
+.desktop-navigation {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  /* ===== header =====*/
+  .header {
+    padding: 0 2rem;
+  }
+  .container__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .mobile-navigation {
+    display: none;
+  }
+
+  .desktop-navigation {
+    display: block;
+
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__item {
+      padding: 0 1rem;
+    }
+    &__item:hover {
+      background: var(--clr-light-gray);
+    }
+  }
+}

@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "FuturaPTBold";
+  src: url(./assets/fonts/futura-pt-bold.otf);
+}
+
+@font-face {
+  font-family: "FuturaPTLight";
+  src: url(./assets/fonts/futura-pt-light.otf);
+}
+
+:root {
+  --clr-black: #000000;
+  --clr-light-black: #0a0a0a;
+  --clr-blue: #0a32ff;
+
+  --clr-light-green: #cbedde;
+  --clr-gray: #eeeeee;
+  --clr-light-gray: #f5f5f5;
+
+  --clr-light-gray-2: #f7f7f7;
+  --clr-djamo-red: #fd3c2d;
+  --clr-djamo-yellow: #ffefbe;
+
+  --clr-light: #ffffff;
+  --clr-dark-4: #363636;
+  --clr-green: #48c774;
+
+  --clr-dark-2: #4a4a4a;
+  --clr-dark-opacity-0: rgba(0, 0, 0, 0);
+  --clr-light-black-8: rgb(10, 10, 10, 0.8);
+
+  --clr-light-gray-2: #c4c4c4;
+}
+
+body {
+  font-family: "FuturaPTLight";
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+li {
+  padding: 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utilities classes */
+.container {
+  margin: 0 2rem;
+}

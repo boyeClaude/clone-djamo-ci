@@ -1,0 +1,71 @@
+<header class="header">
+  <div class="container">
+    <div class="container__wrapper">
+      <div class="header-menu">
+        <img
+          class="header-djamo-logo"
+          src="../assets/icons/djamo-logo-black.svg"
+          alt=" the djamo logo"
+        />
+        <div class="navigation">
+          <div class="mobile-menu">
+            <a
+              *ngIf="isNavigationOpen"
+              class="hamburger-menu"
+              (click)="toggleNavigation()"
+            >
+              <img
+                src="../assets/icons/hamburger-menu-icon.svg"
+                alt="hamburger-menu-icon"
+              />
+            </a>
+            <a
+              *ngIf="!isNavigationOpen"
+              class="close-menu"
+              (click)="toggleNavigation()"
+            >
+              <img
+                class="close-menu-icon"
+                src="../assets/icons/close-icon-menu.svg"
+                alt="close-menu-icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!isNavigationOpen" class="mobile-navigation">
+        <ul>
+          <li>Tarfis</li>
+          <li>Points relais</li>
+          <li>Apprendre</li>
+          <li>A propos</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+
+      <div class="desktop-navigation">
+        <!-- desktop navigation -->
+        <ul class="desktop-navigation__menu">
+          <li class="desktop-navigation__item">
+            <a href="#"> Tarfis </a>
+          </li>
+          <li class="desktop-navigation__item">
+            <a href="#">Points relais</a>
+          </li>
+          <li class="desktop-navigation__item">
+            <a href="#">Apprendre</a>
+          </li>
+          <li class="desktop-navigation__item">
+            <a href="#">A propos</a>
+          </li>
+          <li class="desktop-navigation__item">
+            <a href="#">FAQ</a>
+          </li>
+          <li class="desktop-navigation__item">
+            <a href="#">S'inscrire</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
