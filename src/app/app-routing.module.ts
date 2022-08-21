@@ -1,21 +1,40 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import { ApprendreComponent } from './apprendre/apprendre.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { FaqComponent } from './faq/faq.component';
-import { HomeComponent } from './home/home.component';
-import { PointsRelaisComponent } from './points-relais/points-relais.component';
 import { TarifsComponent } from './tarifs/tarifs.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
+
   { path: 'tarifs', component: TarifsComponent },
-  { path: 'points-relais', component: PointsRelaisComponent },
-  { path: 'apprendre', component: ApprendreComponent },
+
+  {
+    path: 'points-relais',
+    loadChildren: () =>
+      import('./points-relais/points-relais.module').then(
+        (m) => m.PointsRelaisModule
+      ),
+  },
+
+  {
+    path: 'apprendre',
+    loadChildren: () =>
+      import('./apprendre/apprendre.module').then((m) => m.ApprendreModule),
+  },
+
   { path: 'about', component: AboutComponent },
-  { path: 'faq', component: FaqComponent },
+
+  {
+    path: 'faq',
+    loadChildren: () => import('./faq/faq.module').then((m) => m.FAQModule),
+  },
+
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+
   { path: '**', component: NotFoundComponent },
 ];
 

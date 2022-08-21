@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TarifsComponent } from './tarifs/tarifs.component';
+import { StepCardComponent } from './home/components/step-card/step-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TarifsComponent } from './tarifs/tarifs.component';
     FaqComponent,
     FooterComponent,
     TarifsComponent,
+    StepCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
