@@ -2,11 +2,13 @@
   <div class="container">
     <div class="container__wrapper">
       <div class="header-menu">
-        <img
-          class="header-djamo-logo"
-          src="../assets/icons/djamo-logo-black.svg"
-          alt=" the djamo logo"
-        />
+        <a [routerLink]="['/home']" class="header-menu--brand">
+          <img
+            class="header-djamo-logo"
+            src="../assets/icons/djamo-logo-black.svg"
+            alt=" the djamo logo"
+          />
+        </a>
         <div class="navigation">
           <div class="mobile-menu">
             <a
@@ -15,6 +17,7 @@
               (click)="toggleNavigation()"
             >
               <img
+                class="hamburger-menu__icon"
                 src="../assets/icons/hamburger-menu-icon.svg"
                 alt="hamburger-menu-icon"
               />
@@ -35,11 +38,29 @@
       </div>
       <div *ngIf="!isNavigationOpen" class="mobile-navigation">
         <ul>
-          <li>Tarfis</li>
-          <li>Points relais</li>
-          <li>Apprendre</li>
-          <li>A propos</li>
-          <li>FAQ</li>
+          <li>
+            <a (click)="toggleNavigation()" [routerLink]="['/tarifs']"
+              >Tarfis</a
+            >
+          </li>
+          <li>
+            <a (click)="toggleNavigation()" [routerLink]="['/points-relais']"
+              >Points relais</a
+            >
+          </li>
+          <li>
+            <a (click)="toggleNavigation()" [routerLink]="['/apprendre']"
+              >Apprendre</a
+            >
+          </li>
+          <li>
+            <a (click)="toggleNavigation()" [routerLink]="['/about']"
+              >A propos</a
+            >
+          </li>
+          <li>
+            <a (click)="toggleNavigation()" [routerLink]="['/faq']">FAQ</a>
+          </li>
         </ul>
       </div>
 
@@ -47,19 +68,19 @@
         <!-- desktop navigation -->
         <ul class="desktop-navigation__menu">
           <li class="desktop-navigation__item">
-            <a href="#"> Tarfis </a>
+            <a [routerLink]="['/tarifs']">Tarfis</a>
           </li>
           <li class="desktop-navigation__item">
-            <a href="#">Points relais</a>
+            <a [routerLink]="['/points-relais']">Points relais</a>
           </li>
           <li class="desktop-navigation__item">
-            <a href="#">Apprendre</a>
+            <a [routerLink]="['/apprendre']">Apprendre</a>
           </li>
           <li class="desktop-navigation__item">
-            <a href="#">A propos</a>
+            <a [routerLink]="['/a-propos']">A propos</a>
           </li>
           <li class="desktop-navigation__item">
-            <a href="#">FAQ</a>
+            <a [routerLink]="['/faq']">FAQ</a>
           </li>
           <li class="desktop-navigation__item">
             <a href="#">S'inscrire</a>

@@ -1,10 +1,10 @@
 .header {
   background: var(--clr-light-green);
-  padding: 1.5rem 2rem;
+  padding: 0.5rem 1rem;
 
   &-djamo-logo {
     width: 100%;
-    max-width: 130px;
+    max-width: 110px;
   }
 
   &-menu {
@@ -20,6 +20,10 @@
 
 .desktop-navigation {
   display: none;
+}
+
+.hamburger-menu__icon {
+  width: 20px;
 }
 
 @media screen and (min-width: 1000px) {

@@ -1,0 +1,86 @@
+.footer {
+  background: #000000;
+  color: #ffffff;
+  padding: 1.5rem 0;
+
+  &--container {
+    margin: 0 2rem;
+  }
+}
+
+// company logo
+.company-group--logo {
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+
+  &--title {
+    font-size: 1.2rem;
+  }
+}
+
+.google-play-logo,
+.app-store-logo {
+  width: 100%;
+  max-width: 180px;
+}
+
+// Society
+.society {
+  &--title {
+    font-size: 1.2rem;
+  }
+  &--elements {
+    margin-top: 0;
+
+    li {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.about-us {
+  margin-bottom: 3rem;
+
+  &--title {
+    font-size: 1.2rem;
+  }
+
+  &__social-links {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+
+// social links
+.links__items + .links__items {
+  padding-left: 2rem;
+}
+
+.img-instagram,
+.img-twitter {
+  width: 30px;
+}
+
+.img-facebook {
+  width: 18px;
+}
+
+.more-info {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.email {
+  text-decoration-line: underline;
+}
+
+.webiste {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.9rem;
+}

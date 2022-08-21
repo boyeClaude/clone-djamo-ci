@@ -10,7 +10,9 @@ export class HeaderComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.toggleNavigation();
+  }
 
   toggleNavigation(): void {
     this.isNavigationOpen = !this.isNavigationOpen;
