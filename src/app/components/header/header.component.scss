@@ -1,6 +1,9 @@
 .header {
   background: var(--clr-light-green);
   padding: 0.5rem 1rem;
+  position: fixed;
+
+  width: 100%;
 
   &-djamo-logo {
     width: 100%;

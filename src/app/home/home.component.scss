@@ -1,11 +1,37 @@
 .hero {
   background: var(--clr-light-green);
-
+  padding-top: 8rem;
   &-img {
     width: 100%;
   }
 }
 
+.container {
+  padding: 0 0.2rem;
+}
+
 .steps {
   background: var(--clr-light-gray);
+}
+
+// comment ca marce
+.without-fees,
+.keep-control {
+  background: var(--clr-light-green);
+}
+
+.bottom {
+  padding: 0 1rem;
+}
+.new-area {
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  margin: 4rem 0;
+
+  &--background-image {
+    background-color: #ccc;
+    background-image: url(../../assets/images/new-era-background.jpg);
+    padding: 200px 0;
+    background-size: cover;
+  }
 }

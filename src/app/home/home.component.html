@@ -33,30 +33,164 @@
 </section>
 
 <section class="steps">
-  <div class="steps--wrapper">
-    <div class="step-card">
-      <div>
-        <img src="../../assets/icons/account-icon.svg" alt="step" />
+  <ng-container *ngFor="let step of steps">
+    <app-step-card
+      [stepNumber]="step.postion"
+      [stepImage]="step.img"
+      [stepLabel]="step.label"
+    ></app-step-card>
+  </ng-container>
+</section>
+
+<section class="how-its-works">
+  <h2>Comment ça marche ?</h2>
+  <div class="instructions">
+    <div>
+      <ng-container *ngFor="let item of instructions">
+        <app-how-it-works
+          [image]="item.img"
+          [content]="item.content"
+        ></app-how-it-works>
+      </ng-container>
+    </div>
+  </div>
+  <div class="without-fees">
+    <div class="container">
+      <app-home-card
+        [img]="cardWithoutFee.img"
+        [isWithoutFee]="true"
+        [title]="cardWithoutFee.title"
+        [subtitle]="cardWithoutFee.subtitle"
+        [items]="cardWithoutFee.items"
+      ></app-home-card>
+    </div>
+  </div>
+  <div class="limitless">
+    <div class="limitless__left">
+      <h3>Sans limites</h3>
+      <h2>Sans frontières</h2>
+      <ul class="more-info">
+        <li>
+          <img src="../../assets/icons/list-chip.png" alt="the chip" />
+          <span>Payez sans frais en ligne et à l'étranger.</span>
+        </li>
+        <li>
+          <img src="../../assets/icons/list-chip.png" alt="the chip" />
+          <span
+            >Retirez du cash dans le monde entier sans frais cachés grâce à
+            votre carte DJAMO Visa.</span
+          >
+        </li>
+      </ul>
+
+      <div class="form">
+        <p>Inscrivez-vous avec votre numéro de téléphone.</p>
+        <div>
+          <select name="phoneIndicator" id="phoneIndicator">
+            <option value="+225">+255</option>
+          </select>
+          <input type="text" placeholder="Numero de telephone" />
+          <button>S'inscrire</button>
+        </div>
       </div>
-      <div>
-        <span>1</span>
-        <span>Compte</span>
+
+      <div class="company-store">
+        <p>Téléchargez l'application maintenant.</p>
+        <div class="box-logo">
+          <img src="../../assets/icons/apple-ios.webp" alt="apple store" />
+          <img src="../../assets/icons/google-play.png" alt="play stor" />
+        </div>
       </div>
+    </div>
+    <div class="limitless__right">
+      <img src="../../assets/images/djamo-gang.webp" alt="the gang" />
+    </div>
+  </div>
+  <div class="keep-control">
+    <div class="container">
+      <app-home-card
+        [img]="keepControl.img"
+        [isWithoutFee]="false"
+        [title]="keepControl.title"
+        [subtitle]="keepControl.subtitle"
+        [items]="keepControl.items"
+      ></app-home-card>
     </div>
   </div>
 </section>
 
-<section class="how-its-works">
-  <div class="instructions"></div>
-  <div class="without-fees"></div>
-  <div class="limitless"></div>
-  <div class="keep-control"></div>
-</section>
-
 <section class="security">
-  <div class="money"></div>
-  <div class="card"></div>
-  <div class="secure payment"></div>
+  <div class="top">
+    <h2>Votre sécurité, notre priorité</h2>
+    <div class="card">
+      <div class="card-header">
+        <div>Votre argent est en sécurité</div>
+        <div><img src="../../assets/icons/safebox-icon.svg" alt="" /></div>
+      </div>
+      <div class="card-content">
+        <p>
+          DJAMO a créé de multiples niveaux de systèmes et de programmes de
+          sécurité pour
+          <span class="font-bold"> protéger votre argent </span> et prévenir
+          toute utilisation non autorisée. Votre argent est gardé chez nos
+          <span class="font-bold">
+            banques partenaires régulées par la BCEAO.</span
+          >
+        </p>
+      </div>
+    </div>
 
-  <div class="welcome-new-area"></div>
+    <div class="card">
+      <div class="card-header">
+        <div>Carte perdue ou volée</div>
+        <div>
+          <img src="../../assets/icons/secure-card-icon.svg" alt="" />
+        </div>
+      </div>
+      <div class="card-content">
+        <p>
+          Bloquez et débloquez votre carte à l'infini et instantanément depuis
+          l'application. Votre carte est protégée conformément aux règles du
+          plan VISA.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div>Paiements sécurisés</div>
+        <div>
+          <img src="../../assets/icons/shield-icon.svg" alt="icon shield" />
+        </div>
+      </div>
+      <div class="card-content">
+        <p>
+          Pas de risque de dépassement, la carte DJAMO fonctionne comme une
+          carte prépayée et dispose de la technologie 3D Secure pour la
+          protection des paiements en ligne.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="new-area container">
+      <div class="new-area--background-image">
+        <h2>Entrez dans une nouvelle ère</h2>
+        <p>Inscrivez-vous avec votre numéro de téléphone.</p>
+        <div class="form">
+          <select name="phoneIndicater" id="phoneIndicater">
+            <option value="+225">+225</option>
+          </select>
+          <input
+            type="text"
+            name="telephone"
+            id="telephone"
+            placeholder="Numero de telephone"
+          />
+          <button>S'inscrire</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
