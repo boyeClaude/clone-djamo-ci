@@ -36,23 +36,19 @@ export const CARD_WITHOUT_FEES = {
   img: '../../../assets/images/djamo-zero-fees.png',
   title: `Sans commissions, ni frais cachés`,
   subtitle: `Zéro frais`,
-  zero: `zero`,
+  tag: `zéro`,
   items: [
-    { img: '../../../assets/icons/list-chip.png', info: 'frais de gestion' },
+    { info: 'frais de gestion' },
     {
-      img: '../../../assets/icons/list-chip.png',
       info: 'frais sur les rechargements',
     },
     {
-      img: '../../../assets/icons/list-chip.png',
       info: 'frais sur les paiements par carte',
     },
     {
-      img: '../../../assets/icons/list-chip.png',
       info: 'frais sur les transferts vers des comptes Mobile Money ou Djamo',
     },
     {
-      img: '../../../assets/icons/list-chip.png',
       info: `frais sur les retraits partout en Côte d'Ivoire`,
     },
   ],

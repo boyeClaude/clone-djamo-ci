@@ -8,6 +8,7 @@ import { CardItem } from '../../interfaces/card-item.interface';
 })
 export class HomeCardComponent {
   @Input() img!: string;
+  @Input() tag!: string;
   @Input() title!: string;
   @Input() subtitle!: string;
   @Input() items!: CardItem[];

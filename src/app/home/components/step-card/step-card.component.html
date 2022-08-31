@@ -1,11 +1,9 @@
-<div class="steps--wrapper">
-  <div class="step-card">
-    <div>
-      <img [src]="stepImage" alt="step" />
-    </div>
-    <div>
-      <span>{{ stepNumber }}</span>
-      <span>{{ stepLabel }}</span>
-    </div>
+<div class="steps--wrapper--card container">
+  <div class="steps--wrapper--img__container">
+    <img class="steps--wrapper--card__img" [src]="stepImage" alt="step" />
+  </div>
+  <div class="steps--wrapper--content">
+    <span class="steps--wrapper--content__number">{{ stepNumber }}</span>
+    <span class="steps--wrapper--content__label"> {{ stepLabel }}</span>
   </div>
 </div>

@@ -1,31 +1,39 @@
 <section class="hero">
-  <div class="left">
-    <h3>Adieu la frustation</h3>
-    <h2>Hello Djamo!</h2>
-    <p>Le compte et la carte pour mieux gérer votre argent.</p>
-    <p>Ouvrez votre compte gratuitement en vous inscrivant.</p>
-    <div class="mobile-apps-platform">
-      <div class="mobile-apps-platform__android">
-        <img src="../../assets/icons/google-play.png" alt=" play store" />
-      </div>
-      <div class="mobile-apps-platform__ios">
-        <img src="../../assets/icons/apple-ios.webp" alt="apple store" />
-      </div>
+  <div class="hero--left">
+    <h3 class="hero--title">Adieu la frustation</h3>
+    <h2 class="hero--subtitle">Hello Djamo!</h2>
+    <p class="hero--paragraph">
+      Le compte et la carte pour mieux gérer votre argent.
+    </p>
+    <p class="hero--content">
+      Ouvrez votre compte gratuitement en vous inscrivant.
+    </p>
+    <div class="hero--mobile-apps-platform">
+      <img
+        class="hero--mobile-apps-platform__android"
+        src="../../assets/icons/google-play.png"
+        alt=" play store"
+      />
+
+      <img
+        class="hero--mobile-apps-platform__ios"
+        src="../../assets/icons/apple-ios.webp"
+        alt="apple store"
+      />
     </div>
 
-    <div class="form">
-      <form>
-        <select name="number" id="number">
-          <option value="+225">+225</option>
-        </select>
-        <input type="text" placeholder="Numero de telephone" />
-        <a href="#" class="form-btn--inscription"> S'inscrirse</a>
-      </form>
-    </div>
+    <form class="hero-form">
+      <select name="number" id="number">
+        <option value="+225">+225</option>
+      </select>
+      <input type="text" placeholder="Numero de telephone" />
+      <a href="#" class="form-btn--inscription"> S'inscrirse</a>
+    </form>
   </div>
-  <div class="right">
+
+  <div class="hero--right">
     <img
-      class="hero-img"
+      class="hero--right-img"
       src="../../assets/images/djamo-card-people.png"
       alt="people interaction"
     />
@@ -42,22 +50,22 @@
   </ng-container>
 </section>
 
-<section class="how-its-works">
-  <h2>Comment ça marche ?</h2>
-  <div class="instructions">
-    <div>
-      <ng-container *ngFor="let item of instructions">
-        <app-how-it-works
-          [image]="item.img"
-          [content]="item.content"
-        ></app-how-it-works>
-      </ng-container>
-    </div>
+<section id="how-its-works" class="how-its-works">
+  <h2 class="how-its-works--title">Comment ça marche ?</h2>
+
+  <div class="how-its-works--instructions">
+    <ng-container *ngFor="let item of instructions">
+      <app-how-it-works
+        [image]="item.img"
+        [content]="item.content"
+      ></app-how-it-works>
+    </ng-container>
   </div>
-  <div class="without-fees">
+
+  <div class="how-its-works--without-fees container-sm">
     <div class="container">
       <app-home-card
-        [img]="cardWithoutFee.img"
+        [tag]="cardWithoutFee.tag"
         [isWithoutFee]="true"
         [title]="cardWithoutFee.title"
         [subtitle]="cardWithoutFee.subtitle"
@@ -65,25 +73,22 @@
       ></app-home-card>
     </div>
   </div>
-  <div class="limitless">
-    <div class="limitless__left">
-      <h3>Sans limites</h3>
-      <h2>Sans frontières</h2>
-      <ul class="more-info">
-        <li>
-          <img src="../../assets/icons/list-chip.png" alt="the chip" />
-          <span>Payez sans frais en ligne et à l'étranger.</span>
+
+  <div class="how-its-works--limitless container">
+    <div class="how-its-works--limitless__left">
+      <div class="how-its-works--limitless__left--title">Sans limites</div>
+      <h2 class="how-its-works--limitless__left--subtitle">Sans frontières</h2>
+      <ul class="how-its-works--limitless__left--more-info">
+        <li class="how-its-works--limitless__left--more-info--item">
+          Payez sans frais en ligne et à l'étranger.
         </li>
-        <li>
-          <img src="../../assets/icons/list-chip.png" alt="the chip" />
-          <span
-            >Retirez du cash dans le monde entier sans frais cachés grâce à
-            votre carte DJAMO Visa.</span
-          >
+        <li class="how-its-works--limitless__left--more-info--item">
+          Retirez du cash dans le monde entier sans frais cachés grâce à votre
+          carte DJAMO Visa.
         </li>
       </ul>
 
-      <div class="form">
+      <form class="how-its-works--limitless__left--form">
         <p>Inscrivez-vous avec votre numéro de téléphone.</p>
         <div>
           <select name="phoneIndicator" id="phoneIndicator">
@@ -92,21 +97,33 @@
           <input type="text" placeholder="Numero de telephone" />
           <button>S'inscrire</button>
         </div>
-      </div>
+      </form>
 
-      <div class="company-store">
-        <p>Téléchargez l'application maintenant.</p>
+      <div class="how-its-works--limitless__left--company-store">
+        <p class="how-its-works--limitless__left--company-store--title">
+          Téléchargez l'application maintenant.
+        </p>
         <div class="box-logo">
           <img src="../../assets/icons/apple-ios.webp" alt="apple store" />
-          <img src="../../assets/icons/google-play.png" alt="play stor" />
+          <img
+            class="how-its-works--limitless__left--company-store--img-playstore"
+            src="../../assets/icons/google-play.png"
+            alt="play stor"
+          />
         </div>
       </div>
     </div>
-    <div class="limitless__right">
-      <img src="../../assets/images/djamo-gang.webp" alt="the gang" />
+
+    <div class="how-its-works--limitless__right">
+      <img
+        class="how-its-works--limitless__right--img"
+        src="../../assets/images/djamo-gang.webp"
+        alt="the gang"
+      />
     </div>
   </div>
-  <div class="keep-control">
+
+  <div class="how-its-works--keep-control container-sm">
     <div class="container">
       <app-home-card
         [img]="keepControl.img"
@@ -120,15 +137,24 @@
 </section>
 
 <section class="security">
-  <div class="top">
-    <h2>Votre sécurité, notre priorité</h2>
-    <div class="card">
-      <div class="card-header">
-        <div>Votre argent est en sécurité</div>
-        <div><img src="../../assets/icons/safebox-icon.svg" alt="" /></div>
+  <div class="security__top">
+    <h2 class="security__top--title">Votre sécurité, notre priorité</h2>
+    <!-- First Card -->
+    <div class="security__top--card">
+      <div class="security__top--card-header">
+        <div class="security__top--card-header--title">
+          Votre argent est en sécurité
+        </div>
+        <div class="security__top--card-header--wrapper">
+          <img
+            class="security__top--card-header--img"
+            src="../../assets/icons/safebox-icon.svg"
+            alt="safebox-icon"
+          />
+        </div>
       </div>
-      <div class="card-content">
-        <p>
+      <div class="security__top--card-content">
+        <p class="security__top--card-content__paragraph">
           DJAMO a créé de multiples niveaux de systèmes et de programmes de
           sécurité pour
           <span class="font-bold"> protéger votre argent </span> et prévenir
@@ -140,41 +166,55 @@
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-header">
-        <div>Carte perdue ou volée</div>
+    <!-- Second Card -->
+    <div class="security__top--card">
+      <div class="security__top--card-header">
+        <div class="security__top--card-header--title">
+          Carte perdue ou volée
+        </div>
         <div>
-          <img src="../../assets/icons/secure-card-icon.svg" alt="" />
+          <img
+            class="security__top--card-header--img"
+            src="../../assets/icons/secure-card-icon.svg"
+            alt="secure-card-icon"
+          />
         </div>
       </div>
-      <div class="card-content">
-        <p>
-          Bloquez et débloquez votre carte à l'infini et instantanément depuis
-          l'application. Votre carte est protégée conformément aux règles du
-          plan VISA.
+      <div class="security__top--card-content">
+        <p class="security__top--card-content__paragraph">
+          <span class="font-bold">Bloquez et débloquez</span> votre carte à
+          l'infini et instantanément depuis l'application. Votre carte est
+          protégée conformément aux
+          <span class="font-bold">règles du plan VISA.</span>
         </p>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-header">
-        <div>Paiements sécurisés</div>
+    <!-- Third Card -->
+    <div class="security__top--card">
+      <div class="security__top--card-header">
+        <div class="security__top--card-header--title">Paiements sécurisés</div>
         <div>
-          <img src="../../assets/icons/shield-icon.svg" alt="icon shield" />
+          <img
+            class="security__top--card-header--img"
+            src="../../assets/icons/shield-icon.svg"
+            alt="icon shield"
+          />
         </div>
       </div>
-      <div class="card-content">
-        <p>
+      <div class="security__top--card-content">
+        <p class="security__top--card-content__paragraph">
           Pas de risque de dépassement, la carte DJAMO fonctionne comme une
-          carte prépayée et dispose de la technologie 3D Secure pour la
-          protection des paiements en ligne.
+          carte prépayée et dispose de la
+          <span class="font-bold">technologie 3D Secure</span> pour la
+          <span class="font-bold">protection des paiements</span> en ligne.
         </p>
       </div>
     </div>
   </div>
 
-  <div class="bottom">
-    <div class="new-area container">
+  <div class="security__bottom">
+    <div class="security__bottom-- new-area container">
       <div class="new-area--background-image">
         <h2>Entrez dans une nouvelle ère</h2>
         <p>Inscrivez-vous avec votre numéro de téléphone.</p>
