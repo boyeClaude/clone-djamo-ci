@@ -7,7 +7,6 @@
             class="header-djamo-logo"
             src="../assets/icons/djamo-logo-black.svg"
             alt=" the djamo logo"
-            (click)="toggleNavigation()"
           />
         </a>
         <div class="navigation">
@@ -37,33 +36,6 @@
           </div>
         </div>
       </div>
-      <!-- <div *ngIf="!isNavigationOpen" class="mobile-navigation">
-        <ul>
-          <li>
-            <a (click)="toggleNavigation()" [routerLink]="['/tarifs']"
-              >Tarfis</a
-            >
-          </li>
-          <li>
-            <a (click)="toggleNavigation()" [routerLink]="['/points-relais']"
-              >Points relais</a
-            >
-          </li>
-          <li>
-            <a (click)="toggleNavigation()" [routerLink]="['/apprendre']"
-              >Apprendre</a
-            >
-          </li>
-          <li>
-            <a (click)="toggleNavigation()" [routerLink]="['/about']"
-              >A propos</a
-            >
-          </li>
-          <li>
-            <a (click)="toggleNavigation()" [routerLink]="['/faq']">FAQ</a>
-          </li>
-        </ul>
-      </div> -->
 
       <div class="desktop-navigation">
         <!-- desktop navigation -->
@@ -88,9 +60,7 @@
             >
           </li>
           <li class="desktop-navigation__item">
-            <a
-              class="desktop-navigation__item--link"
-              [routerLink]="['/a-propos']"
+            <a class="desktop-navigation__item--link" [routerLink]="['/about']"
               >A propos</a
             >
           </li>
