@@ -21,14 +21,8 @@
         alt="apple store"
       />
     </div>
-
-    <form class="hero-form">
-      <select name="number" id="number">
-        <option value="+225">+225</option>
-      </select>
-      <input type="text" placeholder="Numero de telephone" />
-      <a href="#" class="form-btn--inscription"> S'inscrirse</a>
-    </form>
+    <!-- form -->
+    <app-form></app-form>
   </div>
 
   <div class="hero--right">
@@ -65,6 +59,7 @@
   <div class="how-its-works--without-fees container-sm">
     <div class="container">
       <app-home-card
+        [img]="cardWithoutFee.img"
         [tag]="cardWithoutFee.tag"
         [isWithoutFee]="true"
         [title]="cardWithoutFee.title"
@@ -88,16 +83,8 @@
         </li>
       </ul>
 
-      <form class="how-its-works--limitless__left--form">
-        <p>Inscrivez-vous avec votre numéro de téléphone.</p>
-        <div>
-          <select name="phoneIndicator" id="phoneIndicator">
-            <option value="+225">+255</option>
-          </select>
-          <input type="text" placeholder="Numero de telephone" />
-          <button>S'inscrire</button>
-        </div>
-      </form>
+      <!-- Form -->
+      <app-form></app-form>
 
       <div class="how-its-works--limitless__left--company-store">
         <p class="how-its-works--limitless__left--company-store--title">
@@ -139,98 +126,96 @@
 <section class="security">
   <div class="security__top">
     <h2 class="security__top--title">Votre sécurité, notre priorité</h2>
-    <!-- First Card -->
-    <div class="security__top--card">
-      <div class="security__top--card-header">
-        <div class="security__top--card-header--title">
-          Votre argent est en sécurité
+    <div class="security__top-card-wrapper">
+      <!-- First Card -->
+      <div class="security__top--card">
+        <div class="security__top--card-header">
+          <div class="security__top--card-header--title">
+            Votre argent est en sécurité
+          </div>
+          <div class="security__top--card-header--wrapper">
+            <img
+              class="security__top--card-header--img"
+              src="../../assets/icons/safebox-icon.svg"
+              alt="safebox-icon"
+            />
+          </div>
         </div>
-        <div class="security__top--card-header--wrapper">
-          <img
-            class="security__top--card-header--img"
-            src="../../assets/icons/safebox-icon.svg"
-            alt="safebox-icon"
-          />
+        <div class="security__top--card-content">
+          <p class="security__top--card-content__paragraph">
+            DJAMO a créé de multiples niveaux de systèmes et de programmes de
+            sécurité pour
+            <span class="font-bold"> protéger votre argent </span> et prévenir
+            toute utilisation non autorisée. Votre argent est gardé chez nos
+            <span class="font-bold">
+              banques partenaires régulées par la BCEAO.</span
+            >
+          </p>
         </div>
       </div>
-      <div class="security__top--card-content">
-        <p class="security__top--card-content__paragraph">
-          DJAMO a créé de multiples niveaux de systèmes et de programmes de
-          sécurité pour
-          <span class="font-bold"> protéger votre argent </span> et prévenir
-          toute utilisation non autorisée. Votre argent est gardé chez nos
-          <span class="font-bold">
-            banques partenaires régulées par la BCEAO.</span
-          >
-        </p>
-      </div>
-    </div>
 
-    <!-- Second Card -->
-    <div class="security__top--card">
-      <div class="security__top--card-header">
-        <div class="security__top--card-header--title">
-          Carte perdue ou volée
+      <!-- Second Card -->
+      <div class="security__top--card">
+        <div class="security__top--card-header">
+          <div class="security__top--card-header--title">
+            Carte perdue ou volée
+          </div>
+          <div>
+            <img
+              class="security__top--card-header--img"
+              src="../../assets/icons/secure-card-icon.svg"
+              alt="secure-card-icon"
+            />
+          </div>
         </div>
-        <div>
-          <img
-            class="security__top--card-header--img"
-            src="../../assets/icons/secure-card-icon.svg"
-            alt="secure-card-icon"
-          />
+        <div class="security__top--card-content">
+          <p class="security__top--card-content__paragraph">
+            <span class="font-bold">Bloquez et débloquez</span> votre carte à
+            l'infini et instantanément depuis l'application. Votre carte est
+            protégée conformément aux
+            <span class="font-bold">règles du plan VISA.</span>
+          </p>
         </div>
       </div>
-      <div class="security__top--card-content">
-        <p class="security__top--card-content__paragraph">
-          <span class="font-bold">Bloquez et débloquez</span> votre carte à
-          l'infini et instantanément depuis l'application. Votre carte est
-          protégée conformément aux
-          <span class="font-bold">règles du plan VISA.</span>
-        </p>
-      </div>
-    </div>
 
-    <!-- Third Card -->
-    <div class="security__top--card">
-      <div class="security__top--card-header">
-        <div class="security__top--card-header--title">Paiements sécurisés</div>
-        <div>
-          <img
-            class="security__top--card-header--img"
-            src="../../assets/icons/shield-icon.svg"
-            alt="icon shield"
-          />
+      <!-- Third Card -->
+      <div class="security__top--card">
+        <div class="security__top--card-header">
+          <div class="security__top--card-header--title">
+            Paiements sécurisés
+          </div>
+          <div>
+            <img
+              class="security__top--card-header--img"
+              src="../../assets/icons/shield-icon.svg"
+              alt="icon shield"
+            />
+          </div>
         </div>
-      </div>
-      <div class="security__top--card-content">
-        <p class="security__top--card-content__paragraph">
-          Pas de risque de dépassement, la carte DJAMO fonctionne comme une
-          carte prépayée et dispose de la
-          <span class="font-bold">technologie 3D Secure</span> pour la
-          <span class="font-bold">protection des paiements</span> en ligne.
-        </p>
+        <div class="security__top--card-content">
+          <p class="security__top--card-content__paragraph">
+            Pas de risque de dépassement, la carte DJAMO fonctionne comme une
+            carte prépayée et dispose de la
+            <span class="font-bold">technologie 3D Secure</span> pour la
+            <span class="font-bold">protection des paiements</span> en ligne.
+          </p>
+          <div class="security__top--card-content--box-img">
+            <img
+              class="security__top--card-content--box-img--icon icon-one"
+              src="../../assets/images/pci-dss-logo.png"
+              alt="pci-dss logo"
+            />
+            <img
+              class="security__top--card-content--box-img--icon"
+              src="../../assets/images/3dsecure-logo.png"
+              alt="3d secure logo"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="security__bottom">
-    <div class="security__bottom-- new-area container">
-      <div class="new-area--background-image">
-        <h2>Entrez dans une nouvelle ère</h2>
-        <p>Inscrivez-vous avec votre numéro de téléphone.</p>
-        <div class="form">
-          <select name="phoneIndicater" id="phoneIndicater">
-            <option value="+225">+225</option>
-          </select>
-          <input
-            type="text"
-            name="telephone"
-            id="telephone"
-            placeholder="Numero de telephone"
-          />
-          <button>S'inscrire</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- footer card -->
+  <app-footer-card></app-footer-card>
 </section>

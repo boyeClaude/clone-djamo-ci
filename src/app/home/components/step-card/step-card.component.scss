@@ -15,3 +15,15 @@
     font-size: 1.5rem;
   }
 }
+
+@media screen and (min-width: 770px) {
+  .steps--wrapper--content {
+    &__number {
+      font-size: 2rem;
+    }
+
+    &__label {
+      font-size: 2rem;
+    }
+  }
+}

@@ -38,11 +38,6 @@
     }
   }
 
-  // form
-  &-form {
-    display: none;
-  }
-
   /** Hero Right Section */
   &--right {
     margin-top: 2.5rem;
@@ -54,15 +49,11 @@
   }
 }
 
-// .container {
-//   padding: 0 0.2rem;
-// }
 /* Step Section*/
 .steps {
   background: var(--clr-light-gray);
   display: flex;
   justify-content: space-between;
-
   padding: 1rem 0;
 }
 
@@ -128,9 +119,9 @@
         font-size: 1.3rem;
       }
 
-      &--img-playstore {
-        padding-left: 1rem;
-      }
+      // &--img-playstore {
+      //   padding-left: 1rem;
+      // }
     }
   }
 
@@ -198,25 +189,19 @@
       padding-top: 1rem;
       font-size: 1.1rem;
       line-height: 1.5;
+
+      &--box-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--icon {
+          width: 100%;
+          max-width: 80px;
+          padding: 0 0.5rem;
+        }
+      }
     }
-  }
-}
-
-// Bottom
-
-.bottom {
-  padding: 0 1rem;
-}
-.new-area {
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 4rem 0;
-
-  &--background-image {
-    background-color: #ccc;
-    background-image: url(../../assets/images/new-era-background.jpg);
-    padding: 200px 0;
-    background-size: cover;
   }
 }
 
@@ -245,4 +230,124 @@ li::before {
 .font-bold {
   font-weight: bold;
   font-family: "FuturaPTBold";
+}
+
+.icon-one {
+  max-width: 120px;
+}
+
+@media screen and (min-width: 770px) {
+  /* ==> Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+
+    /* === Left Section */
+    &--left {
+      text-align: left;
+      padding-left: 2.5rem;
+    }
+
+    &--subtitle {
+      font-size: 3rem;
+    }
+
+    &--paragraph {
+      font-family: "FuturaPTLight";
+      font-weight: 900;
+    }
+
+    &--content {
+      padding-top: 1.5rem;
+    }
+
+    &--mobile-apps-platform {
+      display: none;
+    }
+
+    /* Right Section === */
+    &--right {
+      margin-top: 0;
+    }
+  }
+
+  // Step Section
+  .steps {
+    padding: 2.5rem;
+  }
+
+  // How it's works Section
+  .how-its-works {
+    padding-top: 2rem;
+    &--title {
+      font-size: 3rem;
+    }
+
+    &--instructions {
+      display: flex;
+      justify-content: space-between;
+      padding: 1 4rem;
+    }
+
+    // Without fees Section
+
+    // Limitless Section
+    &--limitless {
+      margin: 1rem 4.5rem;
+
+      display: flex;
+      justify-content: space-between;
+      // align-items: center;
+
+      // Left Section
+      &__left {
+        padding-top: 4rem;
+        padding-right: 4rem;
+        padding-left: 2rem;
+
+        &--title {
+          font-size: 1.8rem;
+        }
+
+        &--subtitle {
+          font-size: 3.5rem;
+          font-family: "FuturaPTBold";
+        }
+
+        &--form {
+          display: block;
+        }
+      }
+
+      &__left--company-store {
+        display: none;
+      }
+      // Right Section
+      &__right {
+        &--img {
+          display: block;
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+      }
+    }
+  }
+
+  // Security section
+  .security__top {
+    padding: 0 4rem;
+    margin-bottom: 2rem;
+
+    &--title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    &-card-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+  }
 }

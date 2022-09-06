@@ -62,3 +62,22 @@ li::before {
   padding-top: 1rem;
   cursor: pointer;
 }
+
+@media screen and (min-width: 770px) {
+  .home-card-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__img {
+      display: block;
+      flex: 1;
+    }
+
+    &__card-content {
+      &--title {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
