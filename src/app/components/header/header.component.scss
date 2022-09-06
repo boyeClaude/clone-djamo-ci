@@ -1,6 +1,10 @@
 .header {
   background: var(--clr-light-green);
   padding: 0.5rem 1rem;
+  position: fixed;
+  z-index: 15;
+
+  width: 100%;
 
   &-djamo-logo {
     width: 100%;
@@ -24,6 +28,62 @@
 
 .hamburger-menu__icon {
   width: 20px;
+}
+
+// Mobile Navigation
+.mobile-navigation {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  &--wrapper__item {
+    &--links {
+      font-size: 1.2rem;
+      color: var(--clr-blue);
+    }
+
+    &--links:hover {
+      color: #000000;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Desktop Navigation
+.desktop-navigation {
+  padding: 0 3rem;
+
+  &__item {
+    padding: 0 1rem;
+
+    &--link {
+      font-size: 1.2rem;
+      color: #000000;
+
+      &__btn {
+        color: var(--clr-blue);
+        text-decoration: none;
+        padding: 0.6rem 2rem;
+
+        border-radius: 5px;
+        background: var(--clr-light-green);
+        font-family: "FuturaPTBold";
+
+        border: 1px solid #0a32ff;
+      }
+
+      &__btn:hover {
+        text-decoration: none;
+        background: var(--clr-blue);
+        color: #fff;
+      }
+    }
+
+    &--link:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -54,11 +114,8 @@
       align-items: center;
     }
 
-    &__item {
-      padding: 0 1rem;
-    }
-    &__item:hover {
-      background: var(--clr-light-gray);
-    }
+    // &__item {
+    //   padding: 0 1rem;
+    // }
   }
 }

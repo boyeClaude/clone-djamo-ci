@@ -1,0 +1,63 @@
+.security__bottom {
+  box-shadow: 1px 1px 15px 7px rgb(101 200 155 / 50%);
+  margin-bottom: 2rem;
+  border-radius: 8px;
+
+  color: #fff;
+
+  &--wrapper {
+    background-image: url(../../../assets/images/new-era-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-position: 50%;
+    padding: 200px 0;
+    border-radius: 8px;
+  }
+
+  &--title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: "FuturaPTBold";
+  }
+
+  &--content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--apps-platform {
+      margin-top: 2rem;
+      text-align: center;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      &__image {
+        width: 100%;
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+.security__bottom--content-title {
+  display: none;
+}
+
+@media screen and (min-width: 770px) {
+  .security__bottom {
+    &--title {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .security__bottom--content {
+    &--apps-platform {
+      display: none;
+    }
+  }
+}

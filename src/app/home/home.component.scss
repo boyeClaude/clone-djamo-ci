@@ -1,11 +1,353 @@
+/*Hero Section*/
 .hero {
   background: var(--clr-light-green);
+  padding-top: 8rem;
+  text-align: center;
 
-  &-img {
-    width: 100%;
+  /** Hero Left Section */
+  &--title {
+    font-size: 1.7rem;
+    font-weight: normal;
+  }
+
+  &--subtitle {
+    font-size: 3rem;
+    color: var(--clr-blue);
+    font-family: FuturaPTBold;
+  }
+
+  &--paragraph {
+    font-family: FuturaPTBold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &--content {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &--mobile-apps-platform {
+    display: flex;
+    justify-content: center;
+
+    &__android,
+    &__ios {
+      width: 100%;
+      max-width: 35%;
+    }
+  }
+
+  /** Hero Right Section */
+  &--right {
+    margin-top: 2.5rem;
+
+    &-img {
+      width: 100%;
+      max-width: 80%;
+    }
   }
 }
 
+/* Step Section*/
 .steps {
   background: var(--clr-light-gray);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+/* Section: How Its Works */
+.how-its-works {
+  text-align: center;
+  margin-top: 2.5rem;
+
+  &--title {
+    font-family: "FuturaPTBold";
+    color: var(--clr-blue);
+    font-size: 2.2rem;
+  }
+
+  // Instructions
+  &--instructions {
+    margin: 1.5rem 0;
+  }
+
+  // Without Fees & Keep Control Background
+  &--without-fees,
+  &--keep-control {
+    background: var(--clr-light-green);
+  }
+
+  // Without Fees Section
+  &--without-fees {
+    text-align: left;
+    border-radius: 0.5rem;
+  }
+}
+
+/* Section : Limitless*/
+.how-its-works--limitless {
+  text-align: left;
+  margin-top: 3rem;
+
+  // Left Section
+  &__left {
+    &--title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    &--subtitle {
+      font-size: 2rem;
+      color: var(--clr-blue);
+      font-family: "FuturaPTBold";
+    }
+
+    &-more-info {
+      margin: 0.5rem 0;
+    }
+
+    &--form {
+      display: none;
+    }
+
+    &--company-store {
+      text-align: justify;
+
+      &--title {
+        font-size: 1.3rem;
+      }
+
+      // &--img-playstore {
+      //   padding-left: 1rem;
+      // }
+    }
+  }
+
+  .box-logo {
+    margin: 1rem 0;
+  }
+
+  // Right Section
+  &__right {
+    &--img {
+      display: none;
+    }
+  }
+}
+
+/* Section Keep In Control*/
+.how-its-works--keep-control {
+  text-align: justify;
+  border-radius: 0.5rem;
+}
+
+/* Section Security */
+.security {
+  margin-top: 2rem;
+
+  &__top--title {
+    text-align: center;
+    font-family: "FuturaPTBold";
+    color: var(--clr-blue);
+
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  &__top--card {
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    box-shadow: 1px 1px 15px 7px #eee;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background: #f7f7f7;
+      padding: 0 0.5rem;
+
+      // Title
+      &--title {
+        color: var(--clr-blue);
+        font-family: "FuturaPTBold";
+        font-size: 1.2rem;
+      }
+
+      // Image
+      &--img {
+        width: 50px;
+      }
+    }
+
+    // content
+    &-content {
+      padding-top: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
+
+      &--box-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--icon {
+          width: 100%;
+          max-width: 80px;
+          padding: 0 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+li {
+  position: relative;
+  padding-left: 15px;
+  padding-top: 0;
+  padding-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+
+  background: url("../../assets/icons/list-chip.png");
+  background-size: cover;
+  background-position: 50%;
+
+  position: absolute;
+  left: -15px;
+  top: 0.27rem;
+}
+
+.font-bold {
+  font-weight: bold;
+  font-family: "FuturaPTBold";
+}
+
+.icon-one {
+  max-width: 120px;
+}
+
+@media screen and (min-width: 770px) {
+  /* ==> Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+
+    /* === Left Section */
+    &--left {
+      text-align: left;
+      padding-left: 2.5rem;
+    }
+
+    &--subtitle {
+      font-size: 3rem;
+    }
+
+    &--paragraph {
+      font-family: "FuturaPTLight";
+      font-weight: 900;
+    }
+
+    &--content {
+      padding-top: 1.5rem;
+    }
+
+    &--mobile-apps-platform {
+      display: none;
+    }
+
+    /* Right Section === */
+    &--right {
+      margin-top: 0;
+    }
+  }
+
+  // Step Section
+  .steps {
+    padding: 2.5rem;
+  }
+
+  // How it's works Section
+  .how-its-works {
+    padding-top: 2rem;
+    &--title {
+      font-size: 3rem;
+    }
+
+    &--instructions {
+      display: flex;
+      justify-content: space-between;
+      padding: 1 4rem;
+    }
+
+    // Without fees Section
+
+    // Limitless Section
+    &--limitless {
+      margin: 1rem 4.5rem;
+
+      display: flex;
+      justify-content: space-between;
+      // align-items: center;
+
+      // Left Section
+      &__left {
+        padding-top: 4rem;
+        padding-right: 4rem;
+        padding-left: 2rem;
+
+        &--title {
+          font-size: 1.8rem;
+        }
+
+        &--subtitle {
+          font-size: 3.5rem;
+          font-family: "FuturaPTBold";
+        }
+
+        &--form {
+          display: block;
+        }
+      }
+
+      &__left--company-store {
+        display: none;
+      }
+      // Right Section
+      &__right {
+        &--img {
+          display: block;
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+      }
+    }
+  }
+
+  // Security section
+  .security__top {
+    padding: 0 4rem;
+    margin-bottom: 2rem;
+
+    &--title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    &-card-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+  }
 }

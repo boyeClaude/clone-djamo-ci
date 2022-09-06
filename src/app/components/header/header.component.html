@@ -36,57 +36,94 @@
           </div>
         </div>
       </div>
-      <div *ngIf="!isNavigationOpen" class="mobile-navigation">
-        <ul>
-          <li>
-            <a (click)="toggleNavigation()" [routerLink]="['/tarifs']"
-              >Tarfis</a
-            >
-          </li>
-          <li>
-            <a (click)="toggleNavigation()" [routerLink]="['/points-relais']"
-              >Points relais</a
-            >
-          </li>
-          <li>
-            <a (click)="toggleNavigation()" [routerLink]="['/apprendre']"
-              >Apprendre</a
-            >
-          </li>
-          <li>
-            <a (click)="toggleNavigation()" [routerLink]="['/about']"
-              >A propos</a
-            >
-          </li>
-          <li>
-            <a (click)="toggleNavigation()" [routerLink]="['/faq']">FAQ</a>
-          </li>
-        </ul>
-      </div>
 
       <div class="desktop-navigation">
         <!-- desktop navigation -->
         <ul class="desktop-navigation__menu">
           <li class="desktop-navigation__item">
-            <a [routerLink]="['/tarifs']">Tarfis</a>
+            <a class="desktop-navigation__item--link" [routerLink]="['/tarifs']"
+              >Tarfis</a
+            >
           </li>
           <li class="desktop-navigation__item">
-            <a [routerLink]="['/points-relais']">Points relais</a>
+            <a
+              class="desktop-navigation__item--link"
+              [routerLink]="['/points-relais']"
+              >Points relais</a
+            >
           </li>
           <li class="desktop-navigation__item">
-            <a [routerLink]="['/apprendre']">Apprendre</a>
+            <a
+              class="desktop-navigation__item--link"
+              [routerLink]="['/apprendre']"
+              >Apprendre</a
+            >
           </li>
           <li class="desktop-navigation__item">
-            <a [routerLink]="['/a-propos']">A propos</a>
+            <a class="desktop-navigation__item--link" [routerLink]="['/about']"
+              >A propos</a
+            >
           </li>
           <li class="desktop-navigation__item">
-            <a [routerLink]="['/faq']">FAQ</a>
+            <a class="desktop-navigation__item--link" [routerLink]="['/faq']"
+              >FAQ</a
+            >
           </li>
           <li class="desktop-navigation__item">
-            <a href="#">S'inscrire</a>
+            <a
+              class="desktop-navigation__item--link-btn desktop-navigation__item--link__btn"
+              href="#"
+              >S'inscrire</a
+            >
           </li>
         </ul>
       </div>
     </div>
   </div>
 </header>
+
+<!-- Mobile Navigation -->
+<div *ngIf="!isNavigationOpen" class="mobile-navigation">
+  <ul class="mobile-navigation--wrapper">
+    <li class="mobile-navigation--wrapper__item">
+      <a
+        class="mobile-navigation--wrapper__item--links"
+        (click)="toggleNavigation()"
+        [routerLink]="['/tarifs']"
+        >Tarfis</a
+      >
+    </li>
+    <li class="mobile-navigation--wrapper__item">
+      <a
+        class="mobile-navigation--wrapper__item--links"
+        (click)="toggleNavigation()"
+        [routerLink]="['/points-relais']"
+        >Points relais</a
+      >
+    </li>
+    <li class="mobile-navigation--wrapper__item">
+      <a
+        class="mobile-navigation--wrapper__item--links"
+        (click)="toggleNavigation()"
+        [routerLink]="['/apprendre']"
+        >Apprendre</a
+      >
+    </li>
+    <li class="mobile-navigation--wrapper__item">
+      <a
+        class="mobile-navigation--wrapper__item--links"
+        (click)="toggleNavigation()"
+        [routerLink]="['/about']"
+        >A propos</a
+      >
+    </li>
+    <li class="mobile-navigation--wrapper__item">
+      <a
+        class="mobile-navigation--wrapper__item--links"
+        (click)="toggleNavigation()"
+        [routerLink]="['/faq']"
+        >FAQ</a
+      >
+    </li>
+  </ul>
+</div>

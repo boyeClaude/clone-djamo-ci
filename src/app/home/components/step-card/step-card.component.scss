@@ -1,0 +1,29 @@
+.steps--wrapper--card {
+  display: flex;
+  //   flex-shrink: 0;
+
+  &__img {
+    width: 100%;
+    max-width: 60px;
+    flex-shrink: 0;
+  }
+}
+
+.steps--wrapper--content {
+  &__number {
+    font-family: "FuturaPTBold";
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .steps--wrapper--content {
+    &__number {
+      font-size: 2rem;
+    }
+
+    &__label {
+      font-size: 2rem;
+    }
+  }
+}

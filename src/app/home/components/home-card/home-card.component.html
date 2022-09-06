@@ -1,0 +1,27 @@
+<div class="home-card-wrapper">
+  <div class="home-card-wrapper__container-img">
+    <img class="home-card-wrapper__img" [src]="img" />
+  </div>
+
+  <div class="home-card-wrapper__card-content">
+    <h3 class="home-card-wrapper__card-content--title">{{ title }}</h3>
+    <h2 class="home-card-wrapper__card-content--subtitle">{{ subtitle }}</h2>
+    <ul class="home-card-wrapper__card-content--items">
+      <ng-container *ngFor="let item of items">
+        <li class="home-card-wrapper__card-content--items__block">
+          <span class="tag">{{ tag }}</span> {{ item.info }}
+        </li>
+      </ng-container>
+
+      <ng-container *ngIf="isWithoutFee">
+        <li class="tooltip--li">
+          <img
+            class="home-card-wrapper__card-content__tooltip"
+            src="../../assets/icons/info-icon.svg"
+            alt="info icons"
+          />
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</div>
