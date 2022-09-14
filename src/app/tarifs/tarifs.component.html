@@ -8,39 +8,9 @@
 
 <!-- Card Section -->
 <section class="tarif-card">
-  <div class="tarif-card--wrapper">
-    <div class="tarif-card--header">
-      <div class="tarif-card--header-image"></div>
-      <img src="../../assets/icons/djamo-free-card-icon-coin.svg" alt="" />
-      <p class="tarif-card--header-title">Free</p>
-      <p class="tarif-card--header-subtitle">Le plan pour démarrer</p>
-      <p class="tarif-card--header-plan">0 FCFA / mois</p>
-      <p *ngIf="premium" class="tarif-card--header--info">
-        (Mettez en pause quand vous le voulez)
-      </p>
-    </div>
-    <!-- Card Content -->
-    <div class="tarif-card-content">
-      <!-- top content -->
-      <ul class="tarif-card-content__top">
-        <li>Dépôts 0F</li>
-        <li>Paiements 0F</li>
-        <li>Retraits 0F</li>
-        <li>Djamo vers Djamo 0F</li>
-      </ul>
-      <!-- Separator -->
-      <div class="tarif-card-content__separator"></div>
-      <!-- Bottom content -->
-      <ul class="tarif-card-content__bottom">
-        <li>Djamo vers Mobile Money 1.5%</li>
-        <li>Djamo vers banques 1.5%</li>
-        <li>2 coffres simultanés</li>
-      </ul>
-    </div>
-
-    <!-- Button tarif card -->
-    <button class="tarif-card-content__btn">Commandez pour 5.000 FCFA</button>
-  </div>
+  <ng-container *ngFor="let tarif of tarifs">
+    <app-card-tarif [tarif]="tarif"></app-card-tarif>
+  </ng-container>
 </section>
 
 <!-- Footer card -->

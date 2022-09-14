@@ -1,0 +1,114 @@
+.tarif-card {
+  &--wrapper {
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+      0 0 0 1px rgb(10 10 10 / 2%);
+    border-radius: 10px;
+    display: flex;
+
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 0 3.5rem;
+  }
+
+  &--header {
+    text-align: center;
+
+    &-title {
+      color: var(--clr-blue);
+      font-size: 2rem;
+      font-family: 'FuturaPTBold';
+
+      text-transform: uppercase;
+    }
+
+    &-subtitle {
+      font-size: 1.4rem;
+      color: var(--clr-dark-2);
+      font-weight: 900;
+    }
+
+    &-plan {
+      color: var(--clr-blue);
+      font-size: 2rem;
+      font-family: 'FuturaPTBold';
+    }
+
+    &--info {
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  &--content {
+    &__separator {
+      height: 2px;
+      border: 1px solid #eeeeee;
+    }
+
+    &__btn {
+      color: #fff;
+      border-color: transparent;
+      background-color: var(--clr-blue);
+
+      padding: 0.8rem 1rem;
+      font-size: 1.1rem;
+      font-family: 'FuturaPTBold';
+
+      border-radius: 5px;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.light {
+  background: #fff;
+}
+
+.dark {
+  background: #0e1533;
+  color: #fff;
+}
+
+.text-light {
+  color: #fff;
+}
+
+// li html element
+li {
+  position: relative;
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+
+.free::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+
+  background: url('../../../../assets/icons/list-chip.png');
+  background-size: cover;
+  background-position: 50%;
+
+  position: absolute;
+  left: -15px;
+  top: 0.8rem;
+}
+.premium::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+
+  background: url('../../../../assets/icons/list-chip-blue.svg');
+  background-size: cover;
+  background-position: 50%;
+
+  position: absolute;
+  left: -15px;
+  top: 0.8rem;
+}
+
+.my-4 {
+  margin: 2rem 0;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HERO_SECTION } from './constants';
+import { HERO_SECTION, TARIFS } from './constants';
 
 @Component({
   selector: 'app-tarifs',
@@ -8,6 +8,6 @@ import { HERO_SECTION } from './constants';
 })
 export class TarifsComponent {
   hero = HERO_SECTION;
-  premium: boolean = false;
+  tarifs = TARIFS
   constructor() {}
 }
