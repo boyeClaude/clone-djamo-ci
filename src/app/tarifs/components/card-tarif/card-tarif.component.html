@@ -1,0 +1,69 @@
+<div
+  class="tarif-card--wrapper dark"
+  [ngClass]="{ light: !tarif.isPremium, dark: tarif.isPremium }"
+>
+  <div class="tarif-card--header">
+    <div>
+      <img [src]="tarif.img" alt="icon image" />
+    </div>
+    <div>
+      <p class="tarif-card--header-title">{{ tarif.title }}</p>
+      <p
+        class="tarif-card--header-subtitle"
+        [ngClass]="{ 'text-light': tarif.isPremium }"
+      >
+        {{ tarif.subtitle }}
+      </p>
+      <p
+        class="tarif-card--header-plan"
+        [ngClass]="{ 'text-light': tarif.isPremium }"
+      >
+        {{ tarif.plan }}
+      </p>
+      <p *ngIf="tarif.isPremium" class="tarif-card--header--info">
+        (Mettez en pause quand vous le voulez)
+      </p>
+    </div>
+  </div>
+  <!-- Card Content -->
+  <div class="tarif-card--content">
+    <!-- top content -->
+    <ul class="tarif-card--content__top">
+      <!-- premuim -->
+      <ng-container *ngIf="tarif.isPremium">
+        <ng-container *ngFor="let elem of tarif.content.top">
+          <li class="premium">{{ elem }}</li>
+        </ng-container>
+      </ng-container>
+
+      <!-- free -->
+      <ng-container *ngIf="!tarif.isPremium">
+        <ng-container *ngFor="let elem of tarif.content.top">
+          <li class="free">{{ elem }}</li>
+        </ng-container>
+      </ng-container>
+    </ul>
+    <!-- Separator -->
+    <hr class="tarif-card--content__separator" />
+
+    <!-- Bottom content -->
+    <ul class="tarif-card-content__bottom">
+      <!-- premium -->
+      <ng-container *ngIf="tarif.isPremium">
+        <ng-container *ngFor="let elem of tarif.content.bottom">
+          <li class="premium">{{ elem }}</li>
+        </ng-container>
+      </ng-container>
+
+      <!-- free -->
+      <ng-container *ngIf="!tarif.isPremium">
+        <ng-container *ngFor="let elem of tarif.content.bottom">
+          <li class="free">{{ elem }}</li>
+        </ng-container>
+      </ng-container>
+    </ul>
+  </div>
+
+  <!-- Button tarif card -->
+  <button class="tarif-card--content__btn">Commandez pour 5.000 FCFA</button>
+</div>
