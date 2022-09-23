@@ -1,0 +1,102 @@
+.container {
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  &--title {
+    color: var(--clr-dark-2);
+    font-size: 2.5rem;
+    font-family: 'FuturaPTBold';
+
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+  }
+
+  // Form
+  &-form {
+    background: var(--clr-light-gray);
+    border-radius: 50px;
+    padding: 0.8rem 0.5rem;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    // select wrapper
+    &__select-wrapper {
+      position: relative;
+
+      &:after {
+        content: '\01F354';
+        font-size: 1rem;
+        top: 11px;
+        right: 10px;
+        position: absolute;
+        color: var(--clr-blue);
+      }
+    }
+
+    // select input
+    &__select {
+      padding: 0.6rem;
+      border-radius: 22px;
+      font-size: 1.2rem;
+
+      outline-color: var(--clr-blue);
+      color: #363636;
+      font-family: 'FuturaPTLight';
+
+      &:hover {
+        color: var(--clr-blue);
+        background: #d7e5ff;
+        outline-color: var(--clr-blue);
+      }
+    }
+    // option
+    &--item {
+      margin: 0.5rem;
+    }
+  }
+
+  .paragraph {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .content {
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+  }
+
+  #street,
+  #city {
+    width: 100%;
+  }
+
+  #city {
+    padding-left: 0.5rem;
+    max-width: 150px;
+  }
+
+  #street {
+    padding-left: 1rem;
+    max-width: 350px;
+  }
+}
+
+// hide the default arrow select
+select {
+  --webkit-appearance: none;
+  appearance: none;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
