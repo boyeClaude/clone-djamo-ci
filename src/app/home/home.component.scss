@@ -63,7 +63,7 @@
   margin-top: 2.5rem;
 
   &--title {
-    font-family: "FuturaPTBold";
+    font-family: 'FuturaPTBold';
     color: var(--clr-blue);
     font-size: 2.2rem;
   }
@@ -101,7 +101,7 @@
     &--subtitle {
       font-size: 2rem;
       color: var(--clr-blue);
-      font-family: "FuturaPTBold";
+      font-family: 'FuturaPTBold';
     }
 
     &-more-info {
@@ -149,7 +149,7 @@
 
   &__top--title {
     text-align: center;
-    font-family: "FuturaPTBold";
+    font-family: 'FuturaPTBold';
     color: var(--clr-blue);
 
     font-size: 2rem;
@@ -174,7 +174,7 @@
       // Title
       &--title {
         color: var(--clr-blue);
-        font-family: "FuturaPTBold";
+        font-family: 'FuturaPTBold';
         font-size: 1.2rem;
       }
 
@@ -214,11 +214,11 @@ li {
 }
 
 li::before {
-  content: "";
+  content: '';
   width: 20px;
   height: 20px;
 
-  background: url("../../assets/icons/list-chip.png");
+  background: url('../../assets/icons/list-chip.png');
   background-size: cover;
   background-position: 50%;
 
@@ -229,11 +229,15 @@ li::before {
 
 .font-bold {
   font-weight: bold;
-  font-family: "FuturaPTBold";
+  font-family: 'FuturaPTBold';
 }
 
 .icon-one {
   max-width: 120px;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
 }
 
 @media screen and (min-width: 770px) {
@@ -254,7 +258,7 @@ li::before {
     }
 
     &--paragraph {
-      font-family: "FuturaPTLight";
+      font-family: 'FuturaPTLight';
       font-weight: 900;
     }
 
@@ -312,7 +316,7 @@ li::before {
 
         &--subtitle {
           font-size: 3.5rem;
-          font-family: "FuturaPTBold";
+          font-family: 'FuturaPTBold';
         }
 
         &--form {

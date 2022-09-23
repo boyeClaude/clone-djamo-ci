@@ -68,7 +68,7 @@
 
         border-radius: 5px;
         background: var(--clr-light-green);
-        font-family: "FuturaPTBold";
+        font-family: 'FuturaPTBold';
 
         border: 1px solid #0a32ff;
       }
@@ -113,9 +113,18 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    // &__item {
-    //   padding: 0 1rem;
-    // }
   }
+}
+
+// change the color depending on the page
+.bg-about {
+  background: #fff;
+}
+
+.active {
+  text-decoration-line: underline;
+}
+
+.bg-white {
+  background: #fff;
 }

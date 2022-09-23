@@ -6,12 +6,12 @@
 }
 
 @font-face {
-  font-family: "FuturaPTBold";
+  font-family: 'FuturaPTBold';
   src: url(./assets/fonts/futura-pt-bold.otf);
 }
 
 @font-face {
-  font-family: "FuturaPTLight";
+  font-family: 'FuturaPTLight';
   src: url(./assets/fonts/futura-pt-light.otf);
 }
 
@@ -40,7 +40,7 @@
 }
 
 body {
-  font-family: "FuturaPTLight";
+  font-family: 'FuturaPTLight';
   line-height: 1.6;
   font-size: 1rem;
 }
@@ -75,5 +75,6 @@ a {
 
   .container {
     margin: 0;
+    padding: 0 2rem;
   }
 }

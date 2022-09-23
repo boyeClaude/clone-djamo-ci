@@ -1,8 +1,12 @@
-<header class="header">
+<header class="header" [ngClass]="{ 'bg-about': rla.isActive }">
   <div class="container">
     <div class="container__wrapper">
       <div class="header-menu">
-        <a [routerLink]="['/home']" class="header-menu--brand">
+        <a
+          [routerLink]="['/home']"
+          class="header-menu--brand"
+          (click)="reloadCurrentPage()"
+        >
           <img
             class="header-djamo-logo"
             src="../assets/icons/djamo-logo-black.svg"
@@ -41,12 +45,16 @@
         <!-- desktop navigation -->
         <ul class="desktop-navigation__menu">
           <li class="desktop-navigation__item">
-            <a class="desktop-navigation__item--link" [routerLink]="['/tarifs']"
+            <a
+              class="desktop-navigation__item--link"
+              routerLinkActive="active"
+              [routerLink]="['/tarifs']"
               >Tarfis</a
             >
           </li>
           <li class="desktop-navigation__item">
             <a
+              routerLinkActive="active"
               class="desktop-navigation__item--link"
               [routerLink]="['/points-relais']"
               >Points relais</a
@@ -54,13 +62,18 @@
           </li>
           <li class="desktop-navigation__item">
             <a
+              routerLinkActive="active"
               class="desktop-navigation__item--link"
               [routerLink]="['/apprendre']"
               >Apprendre</a
             >
           </li>
           <li class="desktop-navigation__item">
-            <a class="desktop-navigation__item--link" [routerLink]="['/about']"
+            <a
+              #rla="routerLinkActive"
+              routerLinkActive="active"
+              class="desktop-navigation__item--link"
+              [routerLink]="['/about']"
               >A propos</a
             >
           </li>
@@ -71,8 +84,10 @@
           </li>
           <li class="desktop-navigation__item">
             <a
+              routerLinkActive="active"
               class="desktop-navigation__item--link-btn desktop-navigation__item--link__btn"
               href="#"
+              [ngClass]="{ 'bg-white': rla.isActive }"
               >S'inscrire</a
             >
           </li>
@@ -87,6 +102,7 @@
   <ul class="mobile-navigation--wrapper">
     <li class="mobile-navigation--wrapper__item">
       <a
+        routerLinkActive="active"
         class="mobile-navigation--wrapper__item--links"
         (click)="toggleNavigation()"
         [routerLink]="['/tarifs']"
@@ -95,6 +111,7 @@
     </li>
     <li class="mobile-navigation--wrapper__item">
       <a
+        routerLinkActive="active"
         class="mobile-navigation--wrapper__item--links"
         (click)="toggleNavigation()"
         [routerLink]="['/points-relais']"
@@ -104,6 +121,7 @@
     <li class="mobile-navigation--wrapper__item">
       <a
         class="mobile-navigation--wrapper__item--links"
+        routerLinkActive="active"
         (click)="toggleNavigation()"
         [routerLink]="['/apprendre']"
         >Apprendre</a
@@ -112,6 +130,7 @@
     <li class="mobile-navigation--wrapper__item">
       <a
         class="mobile-navigation--wrapper__item--links"
+        routerLinkActive="active"
         (click)="toggleNavigation()"
         [routerLink]="['/about']"
         >A propos</a
